@@ -1,0 +1,55 @@
+.sberbank.message.success,
+.sberbank.message.fail,
+.sberbank.message.error {
+    text-align: center;
+    width: calc(var(--size-width-form) * 1.5);
+    margin: calc(var(--size-width-cell) * 2) auto;
+}
+
+.sberbank.message .return-back {
+    display: inline-block;
+    padding: calc(var(--size-width-cell) / 2) var(--size-width-cell);
+    background-color: var(--color-bg-return-button);
+    border-radius: calc(var(--size-width-cell) / 4);
+    color: var(--color-text-submit);
+    font-size: var(--size-font);
+    text-shadow: var(--color-text-shadow);
+    text-decoration: none;
+    opacity: var(--opacity-normal);
+    margin: 25px auto;
+}
+
+.sberbank.message .return-back:hover {
+    opacity: var(--opacity-partial);
+}
+
+.sberbank.message .logo,
+.sberbank.message .logo:before,
+.sberbank.message .logo:after {
+    height: 128px;
+    width: 128px;
+    margin: 64px auto;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sberbank.message .logo:before,
+.sberbank.message .logo:after {
+    content: '';
+}
+
+.sberbank.message.success .logo,
+.sberbank.message.success .logo:before,
+.sberbank.message.success .logo:after {
+    background-image: url('../images/success.svg');
+}
+
+.sberbank.message.fail .logo,
+.sberbank.message.fail .logo:before,
+.sberbank.message.fail .logo:after,
+.sberbank.message.error .logo,
+.sberbank.message.error .logo:before,
+.sberbank.message.error .logo:after {
+    background-image: url('../images/fail.svg');
+}

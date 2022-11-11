@@ -1,0 +1,19 @@
+{
+    "name": "mmaurice/qurl",
+    "description": "Simple QueryURL library (based on cURL)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Moss Maurice",
+        "email": "kreexus@yandex.ru"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "mmaurice\\qurl\\": "src/"
+        }
+    }
+}

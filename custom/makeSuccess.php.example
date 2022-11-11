@@ -1,0 +1,40 @@
+<?php
+
+$db = $this->injector->db();
+
+$status = $this->getSession('status');
+$referal = $this->getSessionUserdata('referal');
+$totalAmount = $this->getSessionUserdata('amount');
+
+$fields = array_filter(array(
+    'merchant' => $this->getHandler(),
+    'order_id' => $this->getSession('orderId'),
+    'order_number' => $status->orderNumber,
+    'page_id' => $this->getSession('pageId'),
+    'total_amount' => $totalAmount,
+    'amount' => ($status->amount / 100),
+    'register_date' => (!is_null($status->date) ? date('Y-m-d H:i:s', $status->date / 1000) : null ),
+    'deposit_date' => (!is_null($status->depositedDate) ? date('Y-m-d H:i:s', $status->depositedDate / 1000) : null ),
+    'email' => $status->payerData->email,
+    'phone' => $status->payerData->phone,
+    'status' => $status->orderStatus,
+    'referal' => $referal,
+));
+
+$resource = $db->select('id', $this->modx()->getFullTableName('pay_transaction'), "order_id='" . $this->getSession('orderId') ."'");
+
+if (!$db->getRecordCount($resource)) {
+    $sql = "INSERT INTO " . $this->modx()->getFullTableName('pay_transaction') . " (`" . implode("`, `", array_keys($fields)) . "`) VALUES ('" . implode("', '", array_values($fields)) . "');";
+
+    $result = $db->query($sql);
+} else {
+    $id = $db->getValue($resource);
+
+    $result = $db->update($fields, $this->modx()->getFullTableName('pay_transaction'), "id = '{$id}'");
+}
+
+if ($referal) {
+    $result = $db->update([
+        'status' => 7
+    ], $this->modx()->getFullTableName('pay_transaction'), "order_id = '{$referal}'");
+}

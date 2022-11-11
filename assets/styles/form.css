@@ -1,0 +1,135 @@
+.sberbank.form {
+    width: var(--size-width-form);
+    margin: var(--size-width-cell) auto;
+    border-radius: calc(var(--size-width-cell) / 4);
+    overflow: hidden;
+    background-color: var(--color-bg-default);
+}
+
+.sberbank.form input {
+    min-height: calc(var(--size-width-cell) * 2)
+}
+
+.sberbank.form input[type=text] {
+    padding: calc(var(--size-width-cell) / 2) var(--size-width-cell);
+    width: 100%;
+    background-color: var(--color-bg-text-input);
+    border: 0;
+    color: var(--color-text-input);
+    text-align: center;
+    font-size: var(--size-font);
+    text-shadow: var(--color-text-shadow);
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-bg-border);
+    opacity: var(--opacity-partial);
+}
+
+.sberbank.form input[type=submit] {
+    font-size: var(--size-font);
+    text-transform: uppercase;
+    width: 100%;
+    margin-top: 0;
+    border: 0;
+    background-color: var(--color-bg-submit);
+    color: var(--color-text-submit);
+    cursor: pointer;
+    text-shadow: var(--color-text-shadow);
+    font-weight: bold;
+    padding: calc(var(--size-width-cell) / 2) var(--size-width-cell);
+    display: inline-block;
+    opacity: var(--opacity-partial);
+}
+
+.sberbank.form input[type=submit]:hover {
+    opacity: var(--opacity-normal);
+}
+
+.sberbank.form input[type=submit]:active,
+.sberbank.form input[type=submit]:focus {
+    border: 0;
+}
+
+.sberbank.form input[type=text]:hover,
+.sberbank.form input[type=text]:focus {
+    opacity: var(--opacity-normal);
+}
+
+.sberbank.form input[type=text]::placeholder {
+    font-weight: normal;
+    color: var(--color-text-input);
+    opacity: var(--opacity-half);
+}
+
+.sberbank.form .back-place {
+    padding: 0;
+    font-weight: normal;
+    position: relative;
+}
+
+.sberbank.form .back-place input[type=text] {
+    padding: calc(var(--size-width-cell) / 2) calc(var(--size-width-cell) * 3);
+}
+
+.sberbank.form .back-place:after {
+    text-align: left;
+    position: absolute;
+    right: calc(var(--size-width-cell) * 1.25);
+    top: calc(var(--size-width-cell) * 0.4);
+    font-size: calc(var(--size-font) * 0.9);
+    font-weight: bold !important;
+    text-shadow: var(--color-text-shadow);
+}
+
+.sberbank.form span.currency-caption {
+    position: absolute;
+    display: block;
+    right: var(--size-width-cell);
+    top: calc(var(--size-font) * 0.1);
+    color: var(--color-text-input);
+    font-size: var(--size-font);
+    text-shadow: var(--color-text-shadow);
+}
+
+.sberbank.form input[name=amount]:empty~.sberbank span.currency-caption {
+    display: none;
+}
+
+.sberbank.form .price-fade {
+    width: 100%;
+    font-weight: bold;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    padding: 7px 25px;
+    cursor: default;
+    background-color: var(--color-bg-default);
+    color: #2f3542;
+    font-size: 16px;
+    text-shadow: var(--color-text-shadow);
+    text-align: center;
+}
+
+.sberbank.form .price-fade:after {
+    content: 'руб.';
+    font-weight: bold;
+    display: inline-block;
+    padding: 0 0 0 5px;
+    color: #2f3542;
+    font-size: 16px;
+    text-shadow: var(--color-text-shadow);
+}
+
+span.payform-price {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+
+span.payform-price:hover {
+    border-bottom: 1px dashed #000000;
+}

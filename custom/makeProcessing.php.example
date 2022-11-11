@@ -1,0 +1,43 @@
+<?php
+
+global $modx;
+
+$subject = 'Новая заявка с формы оплаты';
+$body = "
+<h1>Новая заявка с формы оплаты</h1>
+<p>
+    <strong>Номер транзакции в Сбербанке</strong>: {$fields['orderNumber']}<br />
+    <strong>Сумма</strong>: {$fields['amount']}<br />
+    <strong>Наименование тура</strong>: <a href=\"" . $modx->makeUrl(intval($fields['pageId'])) . "\">{$fields['pageTitle']}</a><br />
+    <strong>Дата</strong>: {$fields['userdata']['date']}<br />
+    <strong>Номер договора (счёта)</strong>: {$fields['userdata']['invoice']}<br />
+    <strong>ФИО</strong>: {$fields['userdata']['fio']}<br />
+    <strong>Email</strong>: {$fields['email']}<br />
+    <strong>Телефон</strong>: {$fields['phone']}
+</p>
+";
+
+$modx->loadExtension('MODxMailer');
+
+$modx->mail->IsHTML(true);
+$modx->mail->From = $modx->config['smtp_username'];
+$modx->mail->FromName = $modx->config['client_siteName'];
+//$modx->mail->SMTPSecure = 'ssl';
+$modx->mail->Subject = $subject;
+$modx->mail->msgHTML($body);
+$modx->mail->ClearAllRecipients();
+$modx->mail->AddAddress($modx->config['smtp_username']);
+$modx->mail->SMTPDebug = 3;
+
+ob_start();
+$result = $modx->mail->send();
+$log = ob_get_clean();
+
+if (!$result) {
+    echo '<pre>';
+    var_dump($modx->mail->ErrorInfo);
+    var_dump($log);
+    echo '</pre>';
+
+    die();
+}

@@ -1,0 +1,41 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'module/pay-transactions',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'mmaurice/modx-injector' => array(
+            'pretty_version' => '0.2.1',
+            'version' => '0.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mmaurice/modx-injector',
+            'aliases' => array(),
+            'reference' => '05f952d8d5575c5af3e2442ada78af5d1bb482bf',
+            'dev_requirement' => false,
+        ),
+        'mmaurice/qurl' => array(
+            'pretty_version' => '0.1.1',
+            'version' => '0.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mmaurice/qurl',
+            'aliases' => array(),
+            'reference' => '35bf7751694466ebc73cf899b9fb4d7b8b0660d7',
+            'dev_requirement' => false,
+        ),
+        'module/pay-transactions' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+    ),
+);

@@ -1,0 +1,20 @@
+{
+    "name": "module/pay-transactions",
+    "type": "library",
+    "license": "GPL-2.0+",
+    "authors": [{
+        "name": "Moss Maurice",
+        "email": "kreexus@yandex.ru",
+        "role": "developer"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "mmaurice/modx-injector": "^0.2.1",
+        "mmaurice/qurl": "^0.1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "module\\": "src/"
+        }
+    }
+}

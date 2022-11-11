@@ -1,0 +1,4 @@
+.reservation__buttons .reservation__button {
+    font-size: var(--size-font);
+    position: relative;
+}

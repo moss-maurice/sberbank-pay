@@ -1,0 +1,23 @@
+{
+    "name": "mmaurice/sberbank-pay",
+    "description": "Sberbank equiring for ModX Evolution 1.4.x",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [{
+        "name": "Moss Maurice",
+        "email": "kreexus@yandex.ru",
+        "role": "Developer"
+    }],
+    "require": {
+        "php": ">=5.6",
+        "mmaurice/qurl": "dev-main",
+        "mmaurice/modx-injector": ">=0.2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "mmaurice\\sberpay\\": "./"
+        }
+    }
+}

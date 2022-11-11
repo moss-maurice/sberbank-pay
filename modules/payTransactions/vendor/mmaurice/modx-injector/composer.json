@@ -1,0 +1,19 @@
+{
+    "name": "mmaurice/modx-injector",
+    "description": "Modx 1.2.x injection to use modx API in your console application",
+    "type": "library",
+    "license": "MIT",
+    "authors": [{
+        "name": "Moss Maurice",
+        "email": "kreexus@yandex.ru"
+    }],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "mmaurice\\modx\\": "src/"
+        }
+    }
+}

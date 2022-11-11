@@ -1,0 +1,8 @@
+:root {
+    --size-width-form: 320px;
+    --size-width-cell: 20px;
+    --size-font: 16px;
+    --opacity-normal: 1;
+    --opacity-partial: calc(var(--opacity-normal) * 0.85);
+    --opacity-half: calc(var(--opacity-normal) * 0.5);
+}

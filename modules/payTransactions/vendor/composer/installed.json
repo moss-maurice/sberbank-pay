@@ -1,0 +1,92 @@
+{
+    "packages": [
+        {
+            "name": "mmaurice/modx-injector",
+            "version": "0.2.1",
+            "version_normalized": "0.2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moss-maurice/modx-core.git",
+                "reference": "05f952d8d5575c5af3e2442ada78af5d1bb482bf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moss-maurice/modx-core/zipball/05f952d8d5575c5af3e2442ada78af5d1bb482bf",
+                "reference": "05f952d8d5575c5af3e2442ada78af5d1bb482bf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "time": "2021-09-29T13:28:26+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "mmaurice\\modx\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moss Maurice",
+                    "email": "kreexus@yandex.ru"
+                }
+            ],
+            "description": "Modx 1.2.x injection to use modx API in your console application",
+            "support": {
+                "issues": "https://github.com/moss-maurice/modx-core/issues",
+                "source": "https://github.com/moss-maurice/modx-core/tree/0.2.1"
+            },
+            "install-path": "../mmaurice/modx-injector"
+        },
+        {
+            "name": "mmaurice/qurl",
+            "version": "0.1.1",
+            "version_normalized": "0.1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/moss-maurice/qURL.git",
+                "reference": "35bf7751694466ebc73cf899b9fb4d7b8b0660d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/moss-maurice/qURL/zipball/35bf7751694466ebc73cf899b9fb4d7b8b0660d7",
+                "reference": "35bf7751694466ebc73cf899b9fb4d7b8b0660d7",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "time": "2021-09-22T09:50:11+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "mmaurice\\qurl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moss Maurice",
+                    "email": "kreexus@yandex.ru"
+                }
+            ],
+            "description": "Simple QueryURL library (based on cURL)",
+            "support": {
+                "issues": "https://github.com/moss-maurice/qURL/issues",
+                "source": "https://github.com/moss-maurice/qURL/tree/0.1.1"
+            },
+            "install-path": "../mmaurice/qurl"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

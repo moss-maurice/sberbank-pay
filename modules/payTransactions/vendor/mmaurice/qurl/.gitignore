@@ -1,0 +1,8 @@
+# Ignore preinitialized vendor
+/vendor
+
+# Exclude composer.lock file
+composer.lock
+
+# Exclude todo file
+todo
