@@ -8,8 +8,8 @@ use \mmaurice\sberpay\classes\PluginCore;
 class Plugin extends PluginCore
 {
     const PLUGIN_NAME = 'sberbank';
-    const PLUGIN_VERSION = '0.40.1';
-    const PLUGIN_AUTHOR = 'Viktor Voronkov';
+    const PLUGIN_VERSION = '0.40.2';
+    const PLUGIN_AUTHOR = 'Moss Maurice';
     const PLUGIN_AUTHOR_EMAIL = 'kreexus@yandex.ru';
     const PLUGIN_CONTAINER = 'SberPay';
 
